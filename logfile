@@ -4,3 +4,13 @@
 2023-02-23 13:07:42.084 CET [50096] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
 2023-02-23 13:07:42.089 CET [50097] LOG:  database system was shut down at 2023-02-23 13:07:41 CET
 2023-02-23 13:07:42.095 CET [50096] LOG:  database system is ready to accept connections
+2023-02-23 14:54:39.098 CET [58396] FATAL:  database "rails_watch_list_development" does not exist
+2023-02-23 15:14:59.405 CET [61229] ERROR:  update or delete on table "movies" violates foreign key constraint "fk_rails_630f44bd39" on table "bookmarks"
+2023-02-23 15:14:59.405 CET [61229] DETAIL:  Key (id)=(1) is still referenced from table "bookmarks".
+2023-02-23 15:14:59.405 CET [61229] STATEMENT:  DELETE FROM "movies" WHERE "movies"."id" = $1
+2023-02-23 15:16:12.468 CET [61409] ERROR:  update or delete on table "movies" violates foreign key constraint "fk_rails_630f44bd39" on table "bookmarks"
+2023-02-23 15:16:12.468 CET [61409] DETAIL:  Key (id)=(11) is still referenced from table "bookmarks".
+2023-02-23 15:16:12.468 CET [61409] STATEMENT:  DELETE FROM "movies" WHERE "movies"."id" = $1
+2023-02-23 15:17:09.413 CET [61653] ERROR:  update or delete on table "movies" violates foreign key constraint "fk_rails_630f44bd39" on table "bookmarks"
+2023-02-23 15:17:09.413 CET [61653] DETAIL:  Key (id)=(21) is still referenced from table "bookmarks".
+2023-02-23 15:17:09.413 CET [61653] STATEMENT:  DELETE FROM "movies" WHERE "movies"."id" = $1
