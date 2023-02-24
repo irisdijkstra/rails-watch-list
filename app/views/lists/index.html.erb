@@ -1,9 +1,10 @@
 <div>
   <h1>All the lists (index page) </h1>
-  <p>--- obtained via list.name ---</p>
   <br>
   <ul> <% @lists.each do |list| %>
       <li> <%= link_to list.name, list_path(list) %>  </li>
   <% end %>
   </ul>
+  <br>
+  <%= link_to 'add new list', new_list_path  %>
 </div>
