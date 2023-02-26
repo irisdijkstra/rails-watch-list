@@ -1,6 +1,19 @@
-<h1>Specific list (show)</h1>
+<h1>Specific list</h1>
 <p>see details of your list below</p>
 
-<%= @list.name %>
+<strong><%= @list.name %></strong>
+<br>
+<br>
+<p>See bookmarks below:</p>
+  <p>----------------------------</p>
+<% @bookmark.each do |bookmark| %>
+  <p><strong>comment: </strong><%= bookmark.comment %></p>
+  <p><strong>movie: </strong><%= bookmark.movie.title %></p>
+  <%= link_to "delete this bookmark", bookmark_path(bookmark), class: "btn btn-cancel",
+  data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this list?" } %>
+  <p>----------------------------</p>
+<% end %>
+<br>
+<%= link_to "create new bookmark", new_bookmark_path %>
 <br>
 <%= link_to "back", :back %>

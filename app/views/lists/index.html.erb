@@ -1,5 +1,5 @@
 <div>
-  <h1>All the lists (index page) </h1>
+  <h1>All the lists </h1>
   <br>
   <ul> <% @lists.each do |list| %>
       <li> <%= link_to list.name, list_path(list) %>  </li>
